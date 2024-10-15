@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">SimpleCalculator</string>
+    <string name="app_name">BirthdayCard</string>
+    <string name="happy_birthday">Happy Birthday</string>
+    <string name="mssv">20210815</string>
+    <string name="ten">From Tran Duc Thien</string>
+    <string name="simple_calculator">Simple Calculator</string>
+    <string name="ce">CE</string>
 </resources>
