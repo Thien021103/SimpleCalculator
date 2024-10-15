@@ -2,31 +2,30 @@ package com.example.simplecalculator
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var ce: Button
-    private lateinit var c: Button
-    private lateinit var back: Button
-    private lateinit var div: Button
-    private lateinit var num7: Button
-    private lateinit var num8: Button
-    private lateinit var num9: Button
-    private lateinit var mul: Button
-    private lateinit var num4: Button
-    private lateinit var num5: Button
-    private lateinit var num6: Button
-    private lateinit var sub: Button
-    private lateinit var num1: Button
-    private lateinit var num2: Button
-    private lateinit var num3: Button
-    private lateinit var add: Button
-    private lateinit var oppo: Button
-    private lateinit var num0: Button
-    private lateinit var dot: Button
-    private lateinit var equal: Button
+    private lateinit var ce: TextView
+    private lateinit var c: TextView
+    private lateinit var back: TextView
+    private lateinit var div: TextView
+    private lateinit var num7: TextView
+    private lateinit var num8: TextView
+    private lateinit var num9: TextView
+    private lateinit var mul: TextView
+    private lateinit var num4: TextView
+    private lateinit var num5: TextView
+    private lateinit var num6: TextView
+    private lateinit var sub: TextView
+    private lateinit var num1: TextView
+    private lateinit var num2: TextView
+    private lateinit var num3: TextView
+    private lateinit var add: TextView
+    private lateinit var oppo: TextView
+    private lateinit var num0: TextView
+    private lateinit var dot: TextView
+    private lateinit var equal: TextView
     private lateinit var res: TextView
 
     private var calculation = ""
@@ -71,7 +70,7 @@ class MainActivity : AppCompatActivity() {
                     num0.id, num1.id, num2.id, num3.id, num4.id, num5.id,
                     num6.id, num7.id, num8.id, num9.id -> {
                         state1 = 0
-                        calculation += (it as Button).text
+                        calculation += (it as TextView).text
                         calculation1 += it.text
                         result += it.text
                         res.text = calculation
@@ -90,7 +89,7 @@ class MainActivity : AppCompatActivity() {
                             if (calculation == "" && state1 != 1) {
                                 return
                             } else if (state1 == 1) {
-                                calculation = res.text.toString() + (it as Button).text
+                                calculation = res.text.toString() + (it as TextView).text
                                 res.text = calculation
                                 return
                             } else {
@@ -100,7 +99,7 @@ class MainActivity : AppCompatActivity() {
                         }
 
                         calculation1 = ""
-                        calculation += (it as Button).text
+                        calculation += (it as TextView).text
                         calculation2 = calculation
                         res.text = calculation
                     }
@@ -211,6 +210,7 @@ class MainActivity : AppCompatActivity() {
         }
         ce.setOnClickListener { onClick(it) }
         back.setOnClickListener { onClick(it) }
+        mul.setOnClickListener { onClick(it) }
         div.setOnClickListener { onClick(it) }
         num0.setOnClickListener { onClick(it) }
         num1.setOnClickListener { onClick(it) }
